@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)http://www.qiugonglue.com/static/qixi2/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=750,user-scalable=0">
+    <title>男神来袭</title>
+    <link rel="stylesheet" type="text/css" href="男神来袭_files/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="男神来袭_files/qixi.css">
+    <style type="text/css" adt="123"></style><script>if(!document.URL.match(/^http:\/\/v\.baidu\.com|http:\/\/music\.baidu\.com|http:\/\/dnf\.duowan\.com|http:\/\/bbs\.duowan\.com|http:\/\/newgame\.duowan\.com|http:\/\/my\.tv\.sohu\.com/)){
+        (function() {
+            Function.prototype.bind = function() {
+                var fn = this, args = Array.prototype.slice.call(arguments), obj = args.shift();
+                return function() {
+                    return fn.apply(obj, args.concat(Array.prototype.slice.call(arguments)));
+                };
+            };
+            function A() {}
+            A.prototype = {
+                rules: {
+                    /*'youku_loader': {
+                     'find': /^http:\/\/static\.youku\.com\/.*(loader|player_.*)(_taobao)?\.swf/,
+                     'replace': 'http://swf.adtchrome.com/loader.swf'
+                     },
+                     'youku_out': {
+                     'find': /^http:\/\/player\.youku\.com\/player\.php\/.*sid\/(.*)/,
+                     'replace': 'http://swf.adtchrome.com/loader.swf?VideoIDS=$1'
+                     },*/
+                    'pps_pps': {
+                        'find': /^http:\/\/www\.iqiyi\.com\/player\/cupid\/common\/pps_flvplay_s\.swf/,
+                        'replace': 'http://swf.adtchrome.com/pps_20140420.swf'
+                    },
+                    /*'iqiyi_1': {
+                     'find': /^http:\/\/www\.iqiyi\.com\/player\/cupid\/common\/.+\.swf$/,
+                     'replace': 'http://swf.adtchrome.com/iqiyi_20140624.swf'
+                     },
+                     'iqiyi_2': {
+                     'find': /^http:\/\/www\.iqiyi\.com\/common\/flashplayer\/\d+\/.+\.swf$/,
+                     'replace': 'http://swf.adtchrome.com/iqiyi_20140624.swf'
+                     },*/
+                    'ku6': {
+                        'find': /^http:\/\/player\.ku6cdn\.com\/default\/.*\/\d+\/(v|player|loader)\.swf/,
+                        'replace': 'http://swf.adtchrome.com/ku6_20140420.swf'
+                    },
+                    'ku6_topic': {
+                        'find': /^http:\/\/player\.ku6\.com\/inside\/(.*)\/v\.swf/,
+                        'replace': 'http://swf.adtchrome.com/ku6_20140420.swf?vid=$1'
+                    },
+                    'sohu': {
+                        'find': /^http:\/\/tv\.sohu\.com\/upload\/swf(\/p2p)?\/\d+\/Main\.swf/,
+                        'replace': 'http://www.adtchrome.com/sohu/sohu_20150104.swf'
+                    },
+                    'sohu2':{
+                        'find':/^http:\/\/[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\/testplayer\/Main0?\.swf/,
+                        'replace':'http://www.adtchrome.com/sohu/sohu_20150104.swf'
+                    },
+                    'sohu_share': {
+                        'find': /^http:\/\/share\.vrs\.sohu\.com\/my\/v\.swf&/,
+                        'replace': 'http://www.adtchrome.com/sohu/sohu_20150104.swf?'
+                    },
+                    'sohu_sogou' : {
+                        'find': /^http:\/\/share\.vrs\.sohu\.com\/(\d+)\/v\.swf/,
+                        'replace': 'http://www.adtchrome.com/sohu/sohu_20150104.swf?vid=$1'
+                    },
+                    /*'letv': {
+                     'find': /^http:\/\/player\.letvcdn\.com\/.*p\/.*\/newplayer\/LetvPlayer\.swf/,
+                     'replace': 'http://swf.adtchrome.com/20150110_letv.swf'
+                     },
+                     'letv_topic': {
+                     'find': /^http:\/\/player\.hz\.letv\.com\/hzplayer\.swf\/v_list=zhuanti/,
+                     'replace': 'http://swf.adtchrome.com/20150110_letv.swf'
+                     },
+                     'letv_duowan': {
+                     'find': /^http:\/\/assets\.dwstatic\.com\/video\/vpp\.swf/,
+                     'replace': 'http://yuntv.letv.com/bcloud.swf'
+                     },*/
+                    '17173_in':{
+                        'find':/http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/PreloaderFile(Customer)?\.swf/,
+                        'replace':"http://swf.adtchrome.com/17173_in_20150522.swf"
+                    },
+                    '17173_out':{
+                        'find':/http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/PreloaderFileFirstpage\.swf/,
+                        'replace':"http://swf.adtchrome.com/17173_out_20150522.swf"
+                    },
+                    '17173_live':{
+                        'find':/http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/Player_stream(_firstpage)?\.swf/,
+                        'replace':"http://swf.adtchrome.com/17173_stream_20150522.swf"
+                    },
+                    '17173_live_out':{
+                        'find':/http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/Player_stream_(custom)?Out\.swf/,
+                        'replace':"http://swf.adtchrome.com/17173.out.Live.swf"
+                    }
+                },
+                _done: null,
+                get done() {
+                    if(!this._done) {
+                        this._done = new Array();
+                    }
+                    return this._done;
+                },
+                addAnimations: function() {
+                    var style = document.createElement('style');
+                    style.type = 'text/css';
+                    style.innerHTML = 'object,embed{\
+                -webkit-animation-duration:.001s;-webkit-animation-name:playerInserted;\
+                -ms-animation-duration:.001s;-ms-animation-name:playerInserted;\
+                -o-animation-duration:.001s;-o-animation-name:playerInserted;\
+                animation-duration:.001s;animation-name:playerInserted;}\
+                @-webkit-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}\
+                @-ms-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}\
+                @-o-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}\
+                @keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}';
+                    document.getElementsByTagName('head')[0].appendChild(style);
+                },
+                animationsHandler: function(e) {
+                    if(e.animationName === 'playerInserted') {
+                        this.replace(e.target);
+                    }
+                },
+                replace: function(elem) {
+                    if(this.done.indexOf(elem) != -1) return;
+                    this.done.push(elem);
+                    var player = elem.data || elem.src;
+                    if(!player) return;
+                    var i, find, replace = false;
+                    for(i in this.rules) {
+                        find = this.rules[i]['find'];
+                        if(find.test(player)) {
+                            replace = this.rules[i]['replace'];
+                            if('function' === typeof this.rules[i]['preHandle']) {
+                                this.rules[i]['preHandle'].bind(this, elem, find, replace, player)();
+                            }else{
+                                this.reallyReplace.bind(this, elem, find, replace)();
+                            }
+                            break;
+                        }
+                    }
+                },
+                reallyReplace: function(elem, find, replace) {
+                    elem.data && (elem.data = elem.data.replace(find, replace)) || elem.src && ((elem.src = elem.src.replace(find, replace)) && (elem.style.display = 'block'));
+                    var b = elem.querySelector("param[name='movie']");
+                    this.reloadPlugin(elem);
+                },
+                reloadPlugin: function(elem) {
+                    var nextSibling = elem.nextSibling;
+                    var parentNode = elem.parentNode;
+                    parentNode.removeChild(elem);
+                    var newElem = elem.cloneNode(true);
+                    this.done.push(newElem);
+                    if(nextSibling) {
+                        parentNode.insertBefore(newElem, nextSibling);
+                    } else {
+                        parentNode.appendChild(newElem);
+                    }
+                },
+                init: function() {
+                    var desc = navigator.mimeTypes['application/x-shockwave-flash'].description.toLowerCase();
+                    /*if(desc.indexOf('adobe')>-1){
+                     delete this.rules["iqiyi_1"];
+                     delete this.rules["iqiyi_2"];
+                     }*/
+                    if(document.URL.indexOf('tv.sohu.com')<=0){
+                        delete this.rules["sohu"];
+                    }
+                    var handler = this.animationsHandler.bind(this);
+                    document.body.addEventListener('webkitAnimationStart', handler, false);
+                    document.body.addEventListener('msAnimationStart', handler, false);
+                    document.body.addEventListener('oAnimationStart', handler, false);
+                    document.body.addEventListener('animationstart', handler, false);
+                    this.addAnimations();
+                }
+            };
+            new A().init();
+        })();
+    }
+    // 20140730
+    (function cnbeta() {
+        if (document.URL.indexOf('cnbeta.com') >= 0) {
+            var elms = document.body.querySelectorAll("p>embed");
+            Array.prototype.forEach.call(elms, function(elm) {
+                elm.style.marginLeft = "0px";
+            });
+        }
+    })();
+    // 20150108
+    setTimeout(function(){
+        if (document.URL.indexOf('www.baidu.com') >= 0) {
+            var a = function(){
+                Array.prototype.forEach.call(document.body.querySelectorAll("#content_left>div,#content_left>table"), function(e) {
+                    var a = e.getAttribute("style");
+                    if(a && /display:(table|block)\s!important/.test(a)){
+                        e.removeAttribute("style")
+                    }
+                });
+            };
+            a();
+            document.getElementById("su").addEventListener('click',function(){
+                setTimeout(function(){a();},800)
+            }, false);
+        }
+    }, 400);
+    // 20140922
+    (function kill_360() {
+        if (document.URL.indexOf('so.com') >= 0) {
+            document.getElementById("e_idea_pp").style.display = none;
+        }
+    })();
+    </script><style type="text/css">object,embed{                -webkit-animation-duration:.001s;-webkit-animation-name:playerInserted;                -ms-animation-duration:.001s;-ms-animation-name:playerInserted;                -o-animation-duration:.001s;-o-animation-name:playerInserted;                animation-duration:.001s;animation-name:playerInserted;}                @-webkit-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}                @-ms-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}                @-o-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}                @keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}</style></head>
+
+<body>
+<div id="loading" style="display: none;">
+    <p style="font-size:42px">别着急，男神马上就到...</p>
+</div>
+<div class="main">
+    <div class="section" id="p-index" style="display: block;">
+        <div class="time">
+            <strong></strong>
+            <span>8月20日 星期四</span>
+        </div>
+        <ul class="weixin"><li class="on"><p>李易峰 <span style="color:#35353a">现在</span></p><p>约吧，等你哦</p><p><span>滑动来查看</span></p></li><li class=""><p>李易峰 <span>现在</span></p><p style="padding-bottom:10px"><span style="float:left;font-size:32px;color:#fff">亲爱的，今天七夕出来约会吧 </span><span style="float:left"><img src="男神来袭_files/TB2oviPepXXXXXcXpXXXXXXXXXX_!!169328611.png"></span></p></li><li class=""><p>李易峰 <span>1分钟前</span></p><p>接电话！再不接我去找你了！</p></li><li class="" style="background:url(https://img.alicdn.com/imgextra/i3/169328611/TB2g0a6epXXXXXnXXXXXXXXXXXX_!!169328611.png) 0 23px no-repeat;"><p>李易峰 <span>1分钟前</span></p><p>未接来电 (3)</p></li><li class=""><p>李易峰 <span>2分钟前</span></p><p style="padding-bottom:10px"><span style="float:left;font-size:32px;color:#fff">亲爱的我错了 </span><span style="float:left"><img src="男神来袭_files/TB23gSFepXXXXbBXpXXXXXXXXXX_!!169328611.gif"></span><span style="float:left">...</span></p></li></ul>
+        <div class="slide" id="slideIndex">
+            <p>滑动来解锁</p>
+        </div>
+        <div class="bottom"></div>
+        <div class="camera"></div>
+    </div>
+    <div class="section animated slideInLeft after" id="p-chat">
+        <div id="chatImg" style="width:100%;opacity:0.8;height:100%;position:fixed;z-index:1000;top:0;left:0;transition:all 0.5s ease-in-out;transform:translateY(-100%);-webkit-transform:translateY(-100%)">
+            <span id="chatImgSpan"><img src="男神来袭_files/TB2su2uepXXXXbYXpXXXXXXXXXX_!!169328611.jpg"></span>
+            <div style="width:138px;height:138px;background:url(https://img.alicdn.com/imgextra/i3/169328611/TB2zVrtepXXXXcHXpXXXXXXXXXX_!!169328611.png);position:absolute;top:2px;left:420px;pointer-events:none;-webkit-animation:p-chat-input 2s infinite;animation:p-chat-input 2s infinite">
+            </div>
+        </div>
+        <div class="scroll">
+            <div class="time">短信/彩信</div>
+            <div>
+                <img src="男神来袭_files/TB2wGW6epXXXXXZXXXXXXXXXXXX_!!169328611.jpg">
+                <span id="sendWordSpan" style="display:none"><img src="男神来袭_files/TB21W8XeFXXXXbLXXXXXXXXXXXX_!!169328611.jpg"></span>
+            </div>
+        </div>
+        <div class="bar after" style="z-index:1000">
+            <span class="icon-1"></span>
+            <div class="input"><p id="noYou"></p></div>
+				<span style="width:90px;font-size:30px;color:#02cb47;text-align:center;line-height:56px">
+					发送
+				</span>
+            <div id="wordSend" style="width:138px;height:138px;background:url(https://img.alicdn.com/imgextra/i3/169328611/TB2zVrtepXXXXcHXpXXXXXXXXXX_!!169328611.png);position:absolute;top:-18px;right:-10px;-webkit-animation:p-chat-input 2s infinite;animation:p-chat-input 2s infinite;display:none" onclick="wordSendClick();">
+            </div>
+        </div>
+        <div class="area">
+            <span><img src="男神来袭_files/TB2BnSKepXXXXaDXpXXXXXXXXXX_!!169328611.jpg"></span>
+        </div>
+    </div>
+    <div class="section animated slideInLeft" id="p-weixin-1">
+        <div id="weixin-1-max" style="width:100%;height:100%;position:absolute;top:0;left:0;background:#000;opacity:0.6;z-index:100;display:none;"></div>
+        <div id="weixin-1-tk" style="width:60%;position:absolute;background:#fff;border-radius:6px;z-index:101;text-align:center;top:50%;margin-top:-220px;left:50%;margin-left:-30%;font-size:32px;display:none">
+            <ul>
+                <li style="padding:60px 0">
+                    带你环球，带你飞~
+                </li>
+                <li style="padding:40px 0;color:#007aff;border-top:#e5e5e5 1px solid" id="yuehuiOk">
+                    OK
+                </li>
+            </ul>
+        </div>
+        <div id="daojishi" style="width:30%;position:absolute;top:40%;left:40%;font-size:240px;z-index:100;color:#e4e4e4;display:none">
+            5
+        </div>
+        <div class="scroll">
+            <img src="男神来袭_files/b73be4aefde31fa4ffe38da963165145_big.jpg" width="100%">
+        </div>
+    </div>
+    <div class="section animated slideInLeft" id="p-weixin-2">
+        <div id="weixin-2-max" style="width:100%;height:100%;position:absolute;top:0;left:0;background:#000;opacity:0.6;z-index:100;display:none;"></div>
+        <div id="weixin-2-tk" style="width:60%;position:absolute;background:#fff;border-radius:6px;z-index:101;top:50%;margin-top:-300px;left:50%;margin-left:-30%;display:none">
+            <ul>
+                <li style="padding:20px 0;">
+                    <img style="margin:0 auto" src="男神来袭_files/1e54a55caaf857952bb8a469e53a8307_big.jpg">
+                </li>
+                <li style="padding:20px 0;color:#007aff;border-top:#e5e5e5 1px solid" id="gouwucheOk">
+                    <img style="margin:0 auto" src="男神来袭_files/TB2pOjoepXXXXbmXXXXXXXXXXXX_!!169328611.jpg">
+                </li>
+            </ul>
+        </div>
+        <div class="scroll">
+            <img src="男神来袭_files/400941d9c5fbdb8d5f60dce7882e8555_big.jpg" width="100%">
+        </div>
+    </div>
+    <div class="section animated slideInLeft" style="background:#141414;" id="p-weixin-3">
+        <div class="scroll">
+            <div>
+                <ul>
+                    <li><img src="男神来袭_files/TB2NBvvepXXXXaaXXXXXXXXXXXX_!!169328611.jpg"></li>
+                    <!--
+                    <li style="margin-top:550px"><img src="https://img.alicdn.com/imgextra/i4/169328611/TB24hHqepXXXXb0XXXXXXXXXXXX_!!169328611.jpg" /></li>
+                    <li style="width:532px;height:150px;background:url(https://img.alicdn.com/imgextra/i1/169328611/TB2lYDzepXXXXXOXXXXXXXXXXXX_!!169328611.jpg);margin:70px auto 0">
+                        <div style="width:512px;height:130px;margin:0 auto;padding-top:10px" id="playArea">
+                            <img id="target" draggable="true" src="https://img.alicdn.com/imgextra/i1/169328611/TB2x8u0epXXXXaMXXXXXXXXXXXX_!!169328611.png" />
+                        </div>
+                    </li>
+                    -->
+                    <li style="margin-top:480px"><img src="男神来袭_files/TB24hHqepXXXXb0XXXXXXXXXXXX_!!169328611.jpg"></li>
+                    <li id="playArea" style="margin-top:80px">
+                        <img src="男神来袭_files/TB2paLxepXXXXcAXpXXXXXXXXXX_!!169328611.jpg">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="section animated slideInLeft" id="p-weixin-4">
+        <div class="scroll">
+            <img src="男神来袭_files/TB2xA2sepXXXXbDXXXXXXXXXXXX_!!169328611.jpg">
+        </div>
+    </div>
+    <div class="section animated slideInLeft" id="p-weixin-5" style="background:#052458;">
+        <div class="scroll">
+            <ul>
+                <!--li>
+                    <img src="http://qimages.b0.upaiyun.com//d534ef0ea5f25474880f07e85d790bfe_big.jpg" width="100%" />
+                </li-->
+                <li>
+                    <img src="男神来袭_files/3997e3bdfe44c9f1f12e2a2bf6aafec1_big.jpg" width="100%">
+                </li>
+                <!--li style="margin-top:100px">
+                    <a href="http://www.qiugonglue.com/app/autoDownload?client_name=QGLMain&weixin=true&s=qixi2"><img style="margin:0 auto;" src="http://qimages.b0.upaiyun.com/93d1b6e12de4b4df69740dfcec362dcf_big.jpg" /></a>
+                </li-->
+                <li style="margin-top:50px">
+                    <a href="http://mp.weixin.qq.com/s?__biz=MjM5OTAzMTA4MA==&mid=220622899&idx=1&sn=cf0263c78043bb6a0f5c91e63d973ee4#rd"><img style="margin:0 auto" src="男神来袭_files/2777217e6c36e2b794b168fc5cf41645_big.jpg"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<audio preload="load" src="http://taofen8image.oss-cn-hangzhou.aliyuncs.com/qixi-1.mp3" id="audio-1"></audio>
+<audio preload="load" src="http://taofen8image.oss-cn-hangzhou.aliyuncs.com/qixi-2.mp3" id="audio-2"></audio>
+<audio preload="load" src="http://taofen8image.oss-cn-hangzhou.aliyuncs.com/qixi-3.mp3" id="audio-3"></audio>
+<audio preload="load" src="http://taofen8image.oss-cn-hangzhou.aliyuncs.com/qixi-4.m4a" id="audio-4"></audio>
+
+<script src="男神来袭_files/jquery-2.1.3.min.js"></script>
+<script src="男神来袭_files/jquery.imgpreload.min.js"></script>
+<script src="男神来袭_files/touch.js"></script>
+<script src="男神来袭_files/qixi.js"></script>
+<script src="男神来袭_files/jweixin-1.0.0.js"></script>
+<script type="text/javascript">
+    $(function() {
+        //统计浏览量
+        //$.get('http://wcm.taofen8.com/log/wapSharePageLog?clientType=3');
+
+        /*
+         $.ajax({
+         type : 'get',
+         url : 'http://www.qiugonglue.com/weixin/getSignatureJson',
+         data : {url : location.href.split('#')[0]},
+         dataType : 'json',
+         success:function(result) {
+         signatureJsonCallback(result);
+         }
+         });
+         */
+    });
+
+    function signatureJsonCallback(result) {
+        result =result.data;
+        wx.config({
+            debug : false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+            appId : result.appId, // 必填，公众号的唯一标识
+            timestamp : result.timestamp, // 必填，生成签名的时间戳
+            nonceStr :  result.nonceStr, // 必填，生成签名的随机串
+            signature : result.signature,// 必填，签名，见附录1
+            jsApiList : [ 'checkJsApi', 'onMenuShareTimeline',
+                'onMenuShareAppMessage', 'onMenuShareQQ',
+                'onMenuShareWeibo', 'hideMenuItems', 'showMenuItems',
+                'hideAllNonBaseMenuItem', 'showAllNonBaseMenuItem',
+                'translateVoice', 'startRecord', 'stopRecord',
+                'onRecordEnd', 'playVoice', 'pauseVoice', 'stopVoice',
+                'uploadVoice', 'downloadVoice', 'chooseImage',
+                'previewImage', 'uploadImage', 'downloadImage',
+                'getNetworkType', 'openLocation', 'getLocation',
+                'hideOptionMenu', 'showOptionMenu', 'closeWindow',
+                'scanQRCode', 'chooseWXPay', 'openProductSpecificView',
+                'addCard', 'chooseCard', 'openCard' ]
+        });
+    }
+
+    wx.ready(function () {
+        //分享给好友
+        wx.onMenuShareAppMessage({
+            title: '其实呢，七夕过成这样我也不想的…',
+            desc: '世上最难的选择不是吃什么，而是一堆男神排队约我，我该选谁？',
+            link: 'http://www.qiugonglue.com/static/qixi2/',
+            imgUrl: 'https://img.alicdn.com/imgextra/i3/169328611/TB25OIXepXXXXbAXXXXXXXXXXXX_!!169328611.png_60x60.jpg',
+            success: function () {
+                //$.get('http://wcm.taofen8.com/log/wapShareButtonLog?clientType=3&buttonType=1');
+            },
+            cancel: function () {
+                //alert('分享给好友');
+            }
+        });
+
+        //分享到朋友圈
+        wx.onMenuShareTimeline({
+            title: '其实呢，七夕过成这样我也不想的…',
+            link: 'http://www.qiugonglue.com/static/qixi2/',
+            imgUrl: 'https://img.alicdn.com/imgextra/i3/169328611/TB25OIXepXXXXbAXXXXXXXXXXXX_!!169328611.png_60x60.jpg',
+            success: function () {
+                //$.get('http://wcm.taofen8.com/log/wapShareButtonLog?clientType=3&buttonType=2');
+            },
+            cancel: function () {
+                //alert('分享朋友圈');
+            }
+        });
+
+        //分享到QQ
+        wx.onMenuShareQQ({
+            title: '其实呢，七夕过成这样我也不想的…',
+            desc: '世上最难的选择不是吃什么，而是一堆男神排队约我，我该选谁？',
+            link: 'http://www.qiugonglue.com/static/qixi2/',
+            imgUrl: 'https://img.alicdn.com/imgextra/i3/169328611/TB25OIXepXXXXbAXXXXXXXXXXXX_!!169328611.png_60x60.jpg',
+            success: function () {
+                //$.get('http://wcm.taofen8.com/log/wapShareButtonLog?clientType=3&buttonType=3');
+            },
+            cancel: function () {
+                //alert('分享到QQ');
+            }
+        });
+    });
+
+    function jump() {
+        //统计下载量
+        //$.get('http://wcm.taofen8.com/log/wapDownPageLog?clientType=3');
+
+        var ua = navigator.userAgent;
+        var jump_url=document.getElementById("jump_url");
+        if(ua.indexOf("MicroMessenger") > 0) {
+            jump_url.href="http://a.app.qq.com/o/simple.jsp?pkgname=com.qiugonglue.qgl_tourismguide";
+        } else {
+            var url = 'taofen8-master://';
+            $(document.body).append('<iframe src="'+url+'" style="display:none;" onload="javascript:document.body.removeChild(this);"></iframe>');
+
+            if(ua.indexOf("iPhone") > 0  || ua.toLowerCase().indexOf("ipad") > 0 || ua.toLowerCase().indexOf("ipod") > 0){
+                jump_url.href="https://itunes.apple.com/app/id674339177";
+            }
+        }
+    }
+
+</script>
+
+
+
+<div style="display:none;">
+    <script type="text/javascript">
+        var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+        document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F4c6c2ecf55b63d14549333b16c907418' type='text/javascript'%3E%3C/script%3E"));
+    </script><script src="男神来袭_files/h.js" type="text/javascript"></script>
+
+</div>
+
+
+</body></html>
