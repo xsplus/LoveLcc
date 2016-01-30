@@ -1,0 +1,69 @@
+html,body{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    font-family: 微软雅黑;
+    overflow:hidden;
+}
+.scene {
+    position: absolute;
+    background-size: 100% 100% !important;
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow:hidden;
+}
+.scene.show {
+    display: block;
+}
+.layer{
+    position: absolute;
+    background-size: 100% 100% !important;
+    display: block;
+}
+.text{
+    left: auto !important;
+    position: relative;
+    width: 100% !important;
+    text-align: center;
+}
+.scene.show .layer.show {
+    display: block;
+}
+
+/*调试样式，完成后可删除*/
+.DEBUG .scene.show{
+    display: none !important;
+}
+.DEBUG .scene.DEBUG{
+    display: block !important;
+}
+.DEBUG .layer{
+    border: 1px solid gold;
+}
+.DEBUG .pos_box{
+    background: rgba(255,255,255,0.3);
+    color: gold;
+    position: absolute;
+    z-index: 99999;
+    word-break: keep-all;
+    font-size: 5vh;
+    padding: 1vh 2vh;
+    border: 1px solid #fff;
+    font-family: 微软雅黑;
+}
+.DEBUG.DOWN .pos_box{
+    background: #fff;
+    color: #000;
+}
+.DEBUG .auto_create_btn{
+    font-size: 5vh;
+    z-index: 999999999;
+    position: relative;
+    padding: 1vh 2vh;
+    cursor: pointer;
+    font-family: 微软雅黑;
+}
+.DEBUG .layer.moving{
+    border: 1px solid #fff;
+}
